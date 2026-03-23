@@ -2,6 +2,10 @@ const minOfList = listOfNumbers => listOfNumbers.sort((a, b) => a-b)[0]
 
 const maxOfList = listOfNumbers => listOfNumbers.sort((a, b) => a-b)[listOfNumbers.length-1]
 
+const isObject = obj => {
+  return obj !== null && typeof obj === 'object' && !Array.isArray(obj)
+}
+
 const areObjectsEqual = (obj1, obj2) => {
   const keys1 = Object.keys(obj1)
   const keys2 = Object.keys(obj2)
